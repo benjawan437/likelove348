@@ -1,33 +1,79 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    {{total}}
-    <div class="row">
-      <div class="col-3">
-        <counter lable="WAYV" @cc="sum" />
+    <carousel-section></carousel-section>
+
+    <hr />
+    <div class="row mb-2 ml-auto mr-auto">
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="mr-1 mt-2 ml-1 mb-2">
+            <img alt="img1" src="./assets/20.jpg" height="350px" width="350px" />
+          </div>
+        </div>
       </div>
-      <div class="col-3">
-        <counter lable="LOVE" @cc="sum" />
+      <div class="card-body">
+        <counter @p1="sum" />
+        <br />
+        {{total}}
       </div>
-      <div class="col-3">
-        <counter lable="NCT" @cc="sum" />
+    </div>
+
+    <hr />
+    <div class="row mb-3 ml-auto mr-auto">
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="mr-1 mt-2 ml-1 mb-2">
+            <img alt="img1" src="./assets/15.jpg" height="350px" width="350px" />
+          </div>
+        </div>
       </div>
-      <div class="col-3">
-        <counter lable="SM" @cc="sum" />
+      <div class="card-body">
+        <counter @p2="sum" />
+        <br />
+        {{total}}
+      </div>
+    </div>
+
+    <hr />
+    <div class="row mb-3 ml-auto mr-auto">
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="mr-1 mt-2 ml-1 mb-2">
+            <img alt="img1" src="./assets/3.jpg" height="350px" width="350px" />
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <counter @p3="sum" />
+        <br />
+        {{total}}
       </div>
     </div>
   </div>
-</template>
+</template> 
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import counter from "@/components/counter";
+import counter from "./components/counter.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    counter,
+  },
+
+  data: function () {
+    return {
+      total: 0, //ผลรวมทั้งหมด ---> เอาไปแสดงผล{{}}
+    };
+  },
+
+  methods: {
+    sum(counterValue) {
+      this.total += counterValue;
+    },
   },
 };
 </script>
@@ -39,6 +85,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 </style>
