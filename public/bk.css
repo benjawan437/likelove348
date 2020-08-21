@@ -1,0 +1,6 @@
+.bga {
+    background: -webkit-linear-gradient(left top,rgba(82, 179, 217, 1),rgba(129, 207, 224, 1),rgba(197, 239, 247, 1)); 
+    background: -o-linear-gradient(bottom right, rgba(82, 179, 217, 1),rgba(129, 207, 224, 1),rgba(197, 239, 247, 1)); 
+    background: -moz-linear-gradient(bottom right,rgba(82, 179, 217, 1),rgba(129, 207, 224, 1),rgba(197, 239, 247, 1)); 
+    background: linear-gradient(to bottom right,rgba(82, 179, 217, 1),rgba(129, 207, 224, 1),rgba(197, 239, 247, 1)); 
+  }
